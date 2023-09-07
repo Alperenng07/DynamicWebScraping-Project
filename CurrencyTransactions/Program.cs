@@ -1,7 +1,8 @@
 ﻿using Business;
+using Business.Mapping;
 using DataAccess;
 using DataAccess.Repository;
-using Entity;
+using Entities.Entity;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -17,7 +18,9 @@ builder.Services.AddSwaggerGen();
 
 
 ////mapper tanýmý
-//builder.Services.AddAutoMapper(typeof(MapProfile));
+builder.Services.AddAutoMapper(typeof(MapProfile));
+
+
 
 
 builder.Services.AddScoped<IBaseRepository<User>, BaseRepository<User>>();

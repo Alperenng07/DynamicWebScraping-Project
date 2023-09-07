@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity
+namespace Entities.Entity
 {
-    public class ExchangeRate:BaseEntity
+    public class ExchangeRate : BaseEntity
     {
         public DateTime Date { get; set; }
-       
+
 
         public int Buy { get; set; }
 
