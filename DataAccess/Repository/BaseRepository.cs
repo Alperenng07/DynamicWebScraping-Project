@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace DataAccess.Repository
         private readonly DataContext _context;
         private readonly DbSet<T> _dbSet;
 
-        public IBaseRepository(DataContext context)
+        public BaseRepository(DataContext context)
         {
             _context = context;
             _dbSet = _context.Set<T>();
@@ -53,3 +54,4 @@ namespace DataAccess.Repository
             return entity;
         }
     }
+}

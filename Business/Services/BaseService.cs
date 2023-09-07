@@ -22,7 +22,7 @@ namespace Business
 
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            return await _repository.GetAllAsync(); 
+            return await _repository.GetAllAsync();
         }
 
         public async Task<T> AddAsync(T entity)
@@ -42,3 +42,4 @@ namespace Business
             return await _repository.UpdateAsync(entity);
         }
     }
+}

@@ -9,8 +9,8 @@ namespace Entity
 {
     public class User : BaseEntity
     {
-        [Key]
-        public Guid Id { get; set; }
+        //[Key]
+        //public Guid Id { get; set; }
         public string Name { get; set; }
         public string UserCode { get; set; }
         public string Email { get; set; }
