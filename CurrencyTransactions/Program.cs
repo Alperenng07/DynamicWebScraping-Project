@@ -5,6 +5,10 @@ using DataAccess.Repository;
 using Entities.Entity;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerUI;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +18,16 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+ void ConfigureServices(IServiceCollection services)
+{
+    // Diğer hizmetlerin kaydı
+
+    services.AddHttpClient();
+}
+
+
+// ConfigureServices metodunda
+
 
 
 
